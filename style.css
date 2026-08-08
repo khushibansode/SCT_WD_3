@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    background:
+    radial-gradient(circle at top left,#6D4C74 0%,transparent 35%),
+    radial-gradient(circle at bottom right,#D48CA7 0%,transparent 30%),
+    linear-gradient(135deg,#14121C,#201B2D,#16131F);
+
+}
+
+.container{
+
+    width:90%;
+    max-width:700px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:25px;
+
+    padding:40px;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.45),
+    0 0 25px rgba(214,156,184,.15);
+
+    animation:fadeIn .8s ease;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+.hide{
+
+display:none;
+
+}
+
+h1{
+
+color:#FFE4EC;
+
+text-align:center;
+
+font-size:38px;
+
+margin-bottom:20px;
+
+letter-spacing:2px;
+
+}
+
+h2{
+
+color:#FFD7E6;
+
+text-align:center;
+
+margin-bottom:20px;
+
+}
+
+h3{
+
+color:white;
+
+font-size:28px;
+
+text-align:center;
+
+margin:35px 0;
+
+line-height:1.5;
+
+}
+
+p{
+
+color:#F8E7EC;
+
+text-align:center;
+
+font-size:18px;
+
+margin-bottom:25px;
+
+}
+
+button{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:14px;
+
+font-size:17px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+color:white;
+
+margin-top:15px;
+
+}
+
+button:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 12px 20px rgba(0,0,0,.3);
+
+}
+
+button:active{
+
+transform:scale(.97);
+
+}
+
+#start-btn,
+#next-btn,
+#restart-btn{
+
+background:linear-gradient(135deg,#8F5BE8,#C792EA);
+
+}
+
+.top{
+
+margin-bottom:25px;
+
+}
+
+.progress{
+
+width:100%;
+
+height:12px;
+
+background:rgba(255,255,255,.1);
+
+border-radius:20px;
+
+overflow:hidden;
+
+margin-top:15px;
+
+}
+
+#progress-bar{
+
+width:0%;
+
+height:100%;
+
+background:linear-gradient(to right,#F8A5C2,#C792EA);
+
+transition:.4s;
+
+}
+
+#answer-buttons{
+
+display:grid;
+
+gap:15px;
+
+margin-top:25px;
+
+}
+/* Answer Buttons */
+
+.btn{
+
+    width:100%;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    color:white;
+
+    text-align:left;
+
+    padding:15px 18px;
+
+    border-radius:14px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    background:rgba(255,255,255,.15);
+
+    transform:translateX(5px);
+
+}
+
+.btn.correct{
+
+    background:#22C55E;
+
+    border:none;
+
+}
+
+.btn.wrong{
+
+    background:#EF4444;
+
+    border:none;
+
+}
+
+.btn:disabled{
+
+    cursor:not-allowed;
+
+    opacity:.9;
+
+}
+
+
+/* Result Screen */
+
+#result-screen{
+
+    text-align:center;
+
+}
+
+#score{
+
+    font-size:32px;
+
+    margin:25px 0 10px;
+
+    color:#FFE4EC;
+
+}
+
+#message{
+
+    font-size:20px;
+
+    color:#F8E7EC;
+
+    margin-bottom:25px;
+
+}
+
+
+/* Footer */
+
+footer{
+
+    margin-top:20px;
+
+    color:#F8E7EC;
+
+    font-size:14px;
+
+    text-align:center;
+
+}
+
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.container{
+
+    width:95%;
+
+    padding:28px;
+
+}
+
+h1{
+
+    font-size:30px;
+
+}
+
+h2{
+
+    font-size:22px;
+
+}
+
+h3{
+
+    font-size:22px;
+
+}
+
+p{
+
+    font-size:16px;
+
+}
+
+button{
+
+    font-size:16px;
+
+    padding:14px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.container{
+
+    padding:22px;
+
+}
+
+h1{
+
+    font-size:26px;
+
+}
+
+h3{
+
+    font-size:20px;
+
+}
+
+button{
+
+    padding:13px;
+
+}
+
+}
+
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#D8A9C7;
+
+    border-radius:20px;
+
+}
+
+
+/* Fade Animation */
+
+.fade{
+
+    animation:fade .5s ease;
+
+}
+
+@keyframes fade{
+
+from{
+
+    opacity:0;
+    transform:translateY(10px);
+
+}
+
+to{
+
+    opacity:1;
+    transform:translateY(0);
+
+}
+
+}

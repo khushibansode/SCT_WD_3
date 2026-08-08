@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Web Development Quiz</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Start Screen -->
+
+    <div id="start-screen">
+
+        <h1>Web Development Quiz</h1>
+
+        <p>
+            Test your knowledge of HTML, CSS and JavaScript.
+        </p>
+
+        <button id="start-btn">
+            <i class="fa-solid fa-play"></i>
+            Start Quiz
+        </button>
+
+    </div>
+
+
+    <!-- Quiz Screen -->
+
+    <div id="quiz-screen" class="hide">
+
+        <div class="top">
+
+            <h2 id="question-count">
+                Question 1 / 10
+            </h2>
+
+            <div class="progress">
+
+                <div id="progress-bar"></div>
+
+            </div>
+
+        </div>
+
+
+        <h3 id="question">
+
+            Question appears here
+
+        </h3>
+
+
+        <div id="answer-buttons">
+
+        </div>
+
+
+        <button id="next-btn">
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+            Next
+
+        </button>
+
+    </div>
+
+
+    <!-- Result Screen -->
+
+    <div id="result-screen" class="hide">
+
+        <h1>
+
+            Quiz Completed!
+
+        </h1>
+
+        <h2 id="score">
+
+            You scored 0 / 10
+
+        </h2>
+
+        <p id="message"></p>
+
+        <button id="restart-btn">
+
+            <i class="fa-solid fa-rotate-right"></i>
+
+            Play Again
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    Built with ❤️ using HTML • CSS • JavaScript
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
